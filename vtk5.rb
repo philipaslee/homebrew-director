@@ -45,22 +45,26 @@ class Vtk5 < Formula
   option "with-tcl", "Enable Tcl wrapping of VTK classes"
   option "without-legacy", "Disable legacy APIs"
 
-  deprecated_option "examples" => "with-examples"
-  deprecated_option "qt-extern" => "with-qt-extern"
-  deprecated_option "qt" => "with-qt"
-  deprecated_option "python" => "with-python"
-  deprecated_option "tcl" => "with-tcl"
-  deprecated_option "remove-legacy" => "without-legacy"
-
   depends_on "cmake" => :build
   depends_on :x11 => :optional
-  depends_on "qt" => :optional
+
+  if MacOS.version >= :sierra
+    depends_on "cartr/qt4/qt" => :optional
+  else
+    depends_on "qt" => :optional
+  end
+
   depends_on :python => :recommended
 
   # If --with-qt and --with-python, then we automatically use PyQt, too!
   if build.with?("qt") && build.with?("python")
     depends_on "sip"
-    depends_on "pyqt"
+
+    if MacOS.version >= :sierra
+      depends_on "cartr/qt4/pyqt"
+    else
+      depends_on "robotlocomotion/director/pyqt"
+    end
   end
 
   depends_on "boost" => :recommended
