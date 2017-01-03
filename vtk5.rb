@@ -51,7 +51,7 @@ class Vtk5 < Formula
   if MacOS.version >= :sierra
     depends_on "cartr/qt4/qt" => :optional
   else
-    depends_on "qt" => :optional
+    depends_on "homebrew/director/qt" => :optional
   end
 
   depends_on :python => :recommended
