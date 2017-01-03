@@ -33,7 +33,7 @@ class QwtQt4 < Formula
   if MacOS.version >= :sierra
     depends_on "cartr/qt4/qt"
   else
-    depends_on "qt"
+    depends_on "homebrew/director/qt"
   end
 
   # Update designer plugin linking back to qwt framework/lib after install
