@@ -37,7 +37,7 @@ class Pyqt < Formula
   if MacOS.version >= :sierra
     depends_on "cartr/qt4/qt"
   else
-    depends_on "qt"
+    depends_on "homebrew/director/qt"
   end
 
   if build.with? "python3"
