@@ -33,7 +33,7 @@ class Vtk5 < Formula
     patch do
       # apply upstream patches for C++11 mode
       #url "https://gist.github.com/sxprophet/7463815/raw/165337ae10d5665bc18f0bad645eff098f939893/vtk5-cxx11-patch.diff"
-      "/Users/apple/Library/Caches/Homebrew/vtk5-cxx11-patch.diff"
+      url "http://gist.github.com/sxprophet/7463815/raw/165337ae10d5665bc18f0bad645eff098f939893/vtk5-cxx11-patch.diff"
       sha256 "b5946abb41c3d6ede33df636fa1621bbb86c4092cdae7032e3fdc63a5478f03d"
     end
   end
