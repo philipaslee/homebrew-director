@@ -30,12 +30,11 @@ class Vtk5 < Formula
     url "http://www.vtk.org/files/release/5.10/vtk-5.10.1.tar.gz"
     sha256 "f1a240c1f5f0d84e27b57e962f8e4a78b166b25bf4003ae16def9874947ebdbb"
 
-    patch do
+    #patch do
       # apply upstream patches for C++11 mode
-      url "https://gist.github.com/sxprophet/7463815/raw/165337ae10d5665bc18f0bad645eff098f939893/vtk5-cxx11-patch.diff"
-      #url "http://gist.github.com/sxprophet/7463815/raw/165337ae10d5665bc18f0bad645eff098f939893/vtk5-cxx11-patch.diff"
-      sha256 "b5946abb41c3d6ede33df636fa1621bbb86c4092cdae7032e3fdc63a5478f03d"
-    end
+      #url "https://gist.github.com/sxprophet/7463815/raw/165337ae10d5665bc18f0bad645eff098f939893/vtk5-cxx11-patch.diff"
+      #sha256 "b5946abb41c3d6ede33df636fa1621bbb86c4092cdae7032e3fdc63a5478f03d"
+    #end
   end
 
   keg_only "Conflicts with vtk in homebrew/science."
