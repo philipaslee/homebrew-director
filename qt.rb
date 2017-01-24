@@ -56,7 +56,7 @@ class Qt < Formula
   # Qt4 is dead upstream. We backported a build fix for 10.11 but do not
   # intend to keep rescuing it forever, including for macOS 10.12. Homebrew will
   # be migrating to Qt5 as widely as possible, which remains supported upstream.
-  depends_on MaximumMacOSRequirement => :el_capitan
+  #depends_on MaximumMacOSRequirement => :el_capitan
 
   resource "test-project" do
     url "https://gist.github.com/tdsmith/f55e7e69ae174b5b5a03.git",
